@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b, #6a11cb, #2575fc);
+            color: #333;
+        }
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navele {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 30px;
+        }
+
+        .logo a {
+            font-size: 40px;
+            font-weight: 700;
+            color: violet;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+        }
+
+        li {
+            margin-left: 20px;
+        }
+
+        li a {
+            color: #f32121;
+            font-size: 18px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        li a:hover {
+            color: dodgerblue;
+        }
+
+        img {
+            border-radius: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border: 5px solid #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            font-weight: 700;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        #home {
+            text-align: center;
+            padding: 50px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 30px auto;
+            max-width: 800px;
+        }
+
+        #home h1 {
+            font-size: 32px;
+            color: #333;
+        }
+
+        #home a {
+            font-size: 18px;
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        #home a:hover {
+            text-decoration: underline;
+        }
+
+        /* Online Profiles Section */
+        #links {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        #links h2 {
+            color: white;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .profile-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 0 20px;
+        }
+
+        .profile-card {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .linkedin {
+            background-color: #0077b5;
+        }
+
+        .github {
+            background-color: #333;
+        }
+
+        .leetcode {
+            background-color: #f89f1b;
+        }
+
+        .hackerrank {
+            background-color: #2ec866;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navele">
+            <div class="logo"><a href="#">Portfolio</a></div>
+            <ul>
+                <li><a href="Education.html" target="_blank">Qualification</a></li>
+                <li><a href="Skills.html" target="_blank">Skills</a></li>
+                <li><a href="Projects.html" target="_blank">Projects</a></li>
+                <li><a href="Contact.html" target="_blank">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <img src="photo.jpg" width="200" height="200" alt="Profile Picture">
+
+    <h1>GADIRAJU AJAYVARMA</h1>
+
+    <section id="home">
+        <h1>Welcome to My Portfolio</h1>
+        <h2>
+            <a href="https://drive.google.com/file/d/1V7OGGccdv0Bp-GSebat8utWeQi_LBjZI/view?usp=sharing" download>
+                Download My Resume
+            </a>
+        </h2>
+    </section>
+
+    <section id="links">
+        <h2>Online Profiles</h2>
+        <div class="profile-grid">
+            <a href="https://www.linkedin.com/in/ajay-varma-gadiraju-769b61259" target="_blank" class="profile-card linkedin">LinkedIn</a>
+            <a href="https://github.com/Ajayvarma-github" target="_blank" class="profile-card github">GitHub</a>
+            <a href="https://leetcode.com/u/Ajayvarma12345/" target="_blank" class="profile-card leetcode">LeetCode</a>
+            <a href="https://www.hackerrank.com/profile/ajayvarmagadira1" target="_blank" class="profile-card hackerrank">HackerRank</a>
+        </div>
+    </section>
+
+</body>
+</html>

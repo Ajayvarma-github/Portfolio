@@ -66,6 +66,9 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             margin-top: 20px;
         }
+        img, #home, #links {
+    transition: opacity 1s ease-in-out;
+}
 
         h1 {
             text-align: center;
@@ -185,34 +188,18 @@
         </div>
     </section>
     <script>
-    // Scroll fade-in
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in');
-        }
-      });
+     window.addEventListener('DOMContentLoaded', () => {
+        const img = document.querySelector('img');
+        const home = document.getElementById('home');
+        const links = document.getElementById('links');
+
+        img.style.opacity = 0;
+        home.style.opacity = 0;
+        links.style.opacity = 0;
+        setTimeout(() => img.style.opacity = 1, 200);
+        setTimeout(() => home.style.opacity = 1, 400);
+        setTimeout(() => links.style.opacity = 1, 700);
     });
-
-    document.querySelectorAll('section').forEach(section => {
-      section.classList.add('hidden');
-      observer.observe(section);
-    });
-
-    // Back to Top button
-    const topButton = document.getElementById("topBtn");
-
-    window.onscroll = function () {
-      topButton.style.display =
-        (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
-          ? "block"
-          : "none";
-    };
-
-    function topFunction() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  </script>
-
+</script>
 </body>
 </html>

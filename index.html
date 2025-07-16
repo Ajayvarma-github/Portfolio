@@ -184,6 +184,35 @@
             <a href="https://www.hackerrank.com/profile/ajayvarmagadira1" target="_blank" class="profile-card hackerrank">HackerRank</a>
         </div>
     </section>
+    <script>
+    // Scroll fade-in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    });
+
+    document.querySelectorAll('section').forEach(section => {
+      section.classList.add('hidden');
+      observer.observe(section);
+    });
+
+    // Back to Top button
+    const topButton = document.getElementById("topBtn");
+
+    window.onscroll = function () {
+      topButton.style.display =
+        (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+          ? "block"
+          : "none";
+    };
+
+    function topFunction() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
 
 </body>
 </html>
